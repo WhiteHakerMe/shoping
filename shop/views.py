@@ -38,7 +38,7 @@ def register(requests):
 def single(requests, pk=None):
     ctg = Category.objects.all()
     sneakers = Sneakers.objects.all()
-    random_s = np.random.choice(sneakers, size=6, replace=False)
+    random_s = np.random.choice(sneakers, size=3, replace=True)
     products_pk = Sneakers.objects.get(pk=pk)
     form = ChoiceForm()
     if requests.POST:
